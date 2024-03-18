@@ -1,0 +1,38 @@
+{
+  "name": "hexo-site",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "hexo generate",
+    "clean": "hexo clean",
+    "deploy": "hexo deploy",
+    "server": "hexo server"
+  },
+  "hexo": {
+    "version": "7.1.1"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.24.0",
+    "babel-plugin-inferno": "^6.7.1",
+    "bulma-stylus": "0.8.0",
+    "deepmerge": "^4.3.1",
+    "hexo": "^7.0.0",
+    "hexo-component-inferno": "^3.0.0",
+    "hexo-generator-archive": "^2.0.0",
+    "hexo-generator-category": "^2.0.0",
+    "hexo-generator-index": "^3.0.0",
+    "hexo-generator-tag": "^2.0.0",
+    "hexo-log": "^4.1.0",
+    "hexo-pagination": "^3.0.0",
+    "hexo-renderer-ejs": "^2.0.0",
+    "hexo-renderer-inferno": "^1.0.2",
+    "hexo-renderer-marked": "^6.0.0",
+    "hexo-renderer-stylus": "^3.0.1",
+    "hexo-server": "^3.0.0",
+    "hexo-util": "^3.2.0",
+    "inferno": "^8.2.3",
+    "inferno-create-element": "^8.2.3",
+    "moment": "^2.30.1",
+    "semver": "^7.6.0"
+  }
+}
