@@ -23,6 +23,9 @@ dependencies:
   hexo-component-inferno:
     specifier: ^3.0.0
     version: 3.0.0
+  hexo-filter-auto-spacing:
+    specifier: ^0.2.1
+    version: 0.2.1
   hexo-generator-archive:
     specifier: ^2.0.0
     version: 2.0.0
@@ -2087,6 +2090,13 @@ packages:
       - chokidar
     dev: false
 
+  /hexo-filter-auto-spacing@0.2.1:
+    resolution: {integrity: sha512-CVD0zDTy7ubd5NRtl7zewvM9/qT3gFlbIkp2Y3D4rf39KpO0fsUg/mWOMuh5NzwjYP4fQIleuLKeZmWpYdNdSg==, tarball: https://registry.npmmirror.com/hexo-filter-auto-spacing/-/hexo-filter-auto-spacing-0.2.1.tgz}
+    deprecated: hexo-filter-auto-spacing has been deprecated.
+    dependencies:
+      pangunode: 0.1.0
+    dev: false
+
   /hexo-front-matter@4.2.1:
     resolution: {integrity: sha512-sJJI0GNmejYiwBvgnGRKn5V3sbODB4dNPr8jyw2Qp0PRHr4Uuyv8iyxw6WfK3+T7yvzYvJOh+tZ7jnwr2BYARA==, tarball: https://registry.npmmirror.com/hexo-front-matter/-/hexo-front-matter-4.2.1.tgz}
     engines: {node: '>=14'}
@@ -2801,6 +2811,10 @@ packages:
   /p-try@2.2.0:
     resolution: {integrity: sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==, tarball: https://registry.npmmirror.com/p-try/-/p-try-2.2.0.tgz}
     engines: {node: '>=6'}
+    dev: false
+
+  /pangunode@0.1.0:
+    resolution: {integrity: sha512-Vs4udXXLjaZnBeFGuLIrauj78Y7Kh9Bif9pDk+Wf/9jCjbnC7HHY4qXOcL2GI9vTDAX0uJ6Y5Wzf3Cj58avapA==, tarball: https://registry.npmmirror.com/pangunode/-/pangunode-0.1.0.tgz}
     dev: false
 
   /parse5@7.1.2:

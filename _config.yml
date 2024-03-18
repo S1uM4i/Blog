@@ -93,6 +93,9 @@ include:
 exclude:
 ignore:
 
+auto_spacing:
+  enable: false
+
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
