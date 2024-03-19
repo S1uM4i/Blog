@@ -260,7 +260,7 @@ plugins:
         tracking_id: 
     # BuSuanZi site/page view counter
     # https://busuanzi.ibruce.info
-    busuanzi: false
+    busuanzi: true
     # CNZZ statistics
     # https://www.umeng.com/web
     cnzz:
