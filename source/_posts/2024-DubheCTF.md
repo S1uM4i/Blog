@@ -10,11 +10,11 @@ toc: true
 
 <!--more-->
 
-# 1. Web
+# Web
 
-## 1.1 VulnTagger
+## VulnTagger
 
-> **【VulnTagger新增提示】 1. 本题为传统Web题，不包含****AI****元素，请放心食用 2. 背景图片挺好看的，看看它从哪来？ 3. 版本控制工具是个好东西，出题人很喜欢用。**
+> 【VulnTagger新增提示】 1. 本题为传统Web题，不包含**AI**元素，请放心食用 2. 背景图片挺好看的，看看它从哪来？ 3. 版本控制工具是个好东西，出题人很喜欢用。
 
 根据提示开始脑洞，githack dump 源码
 
@@ -201,7 +201,7 @@ class Exploit(object):
 torch.save(Exploit(), "InjectModel", _use_new_zipfile_serialization=False)
 ```
 
-## 1.2 Wecat
+## Wecat
 
 伪造一下 jwt，本地看 admin 的 uid 是 admin@wecat.com。
 
@@ -281,7 +281,7 @@ Content-Disposition: form-data; name="chunksTotal"
 ------WebKitFormBoundary1MWw8rv9Mkc9QBUn--
 ```
 
-## 1.3 Master of Profile
+## Master of Profile
 
 https://github.com/tindy2013/subconverter 0DAY
 
@@ -324,7 +324,7 @@ http://1.95.13.243:49319/sub?target=clash&url=script:pref.yml&token=189069462103
 
 ![img](../images/2024-DubheCTF/20240319010444751.webp)
 
-## 1.4 Javolution
+## Javolution
 
 游戏逻辑有一个负数溢出？反正打败恶龙了.jpg
 
@@ -529,9 +529,9 @@ public class exp {
 }
 ```
 
-# 2. Reverse
+# Reverse
 
-## 2.1 vmt
+## vmt
 
 有一种恶意样本的美。程序开了1w种反调试和反patch方法，不过都挺老套的，就不细说了。用x32dbg跟一下，会发现程序的运算都是把数字转成字符串来运算，可能也是大数运算？整个加密流程相当复杂，非常难看。。
 
@@ -545,7 +545,7 @@ sm4_dec.set_key(b'Pyu0Z8#bC5vqUFgt', SM4_DECRYPT)
 print(sm4_dec.crypt_ecb(bytes.fromhex('6A61EF281A7473D6B1B431D0351F7E2242CFB9D6EC4E01EF656D6CF520F142821C7061EB843D5ABE378B394C4DC1298B')))
 ```
 
-## 2.2 ezVK
+## ezVK
 
 有一种不知道出什么题就随便找了个bytecode当阅读题的美。Google搜api可以知道是vulkan，然后又发现程序有resource，虽然不知道是什么玩意，但姑且直接起手搜vulkan bytecode看看，结果真搜到东西了。。
 
@@ -637,7 +637,7 @@ int main() {
 }
 ```
 
-## 2.3 moon
+## moon
 
 有一种密码题的美。主要实现了大数运算，虽然判断上写了16进制，但实际上应该是10进制才对。。连蒙带猜可以知道0x140001000是mul，0x140001260是divide（余数存在0x140007828），0x140001780是模0x140007848处的大数的pow。一点一点逆可以得到程序的逻辑：
 
@@ -724,9 +724,9 @@ for t in range(0, 257):
 
 你永远可以相信可靠的J神逆出来的代码不会有任何问题 
 
-# 3. Pwn
+# Pwn
 
-## 3.1 ToySMM
+## ToySMM
 
 ```Python
 from pwn import *
@@ -871,7 +871,7 @@ print(flag)
 sh.interactive()
 ```
 
-## 3.2 Buggyalloc
+## Buggyalloc
 
 ```Python
 from pwn import *
@@ -913,9 +913,9 @@ alloc(16, 0x39, b'/bin/sh\x00')
 sh.interactive()
 ```
 
-# 4. Misc
+# Misc
 
-## 4.1 ezPythonCheckin
+## ezPythonCheckin
 
 ```
 print(open('/flag').read())
@@ -927,7 +927,7 @@ print(open('/flag').read())
 DubheCTF{l3HC7F_h45_4_8e77ER_Ch4lLEngE!}
 ```
 
-## 4.2 authenticated mess & unauthenticated less
+## authenticated mess & unauthenticated less
 
 题目给了个流量包，里面有一个 pastebin 请求，里面写着 v2ray 配置，猜测是用来解后面几个 TCP 连接用的。
 
@@ -1001,7 +1001,7 @@ alt-svc: h3=":443"; ma=86400
 
 ![img](../images/2024-DubheCTF/20240319010444931.webp)
 
-## 4.3 no more taowa
+## no more taowa
 
 当帕鲁，被出题人玩弄。
 
