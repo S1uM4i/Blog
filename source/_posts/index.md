@@ -10,6 +10,8 @@ sticky: 1
 <hr>
 2024
 
+- AliyunCTF 2024 第五名
+
 - XCTF 联赛 DubheCTF 2024 第五名
 
 - XCTF 联赛 L3HCTF 2024 第六名
