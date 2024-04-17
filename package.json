@@ -16,7 +16,7 @@
     "babel-plugin-inferno": "^6.7.1",
     "bulma-stylus": "0.8.0",
     "deepmerge": "^4.3.1",
-    "hexo": "^7.0.0",
+    "hexo": "^7.2.0",
     "hexo-component-inferno": "^3.0.0",
     "hexo-filter-auto-spacing": "^0.2.1",
     "hexo-generator-archive": "^2.0.0",
