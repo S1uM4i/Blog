@@ -36,6 +36,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm i -g pnpm hexo-cli
+          sudo apt install pandoc
           pnpm install
 
       - name: Static HTML export with Hexo
