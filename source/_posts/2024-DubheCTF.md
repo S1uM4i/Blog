@@ -18,9 +18,9 @@ toc: true
 
 根据提示开始脑洞，githack dump 源码
 
-![img](../images/2024-DubheCTF/20240319010444813.webp)
+![](../images/2024-DubheCTF/20240319010444813.webp)
 
-![img](../images/2024-DubheCTF/20240319010444894.webp)
+![](../images/2024-DubheCTF/20240319010444894.webp)
 
 通过 `range: bytes={start}-{end}` 来读取 mem 中的密钥，伪造成 admin 上传 pt 文件，之后 torch load 的时候触发 pickle 反序列化。
 
@@ -156,7 +156,7 @@ if __name__ == '__main__':
 
 Pickle 反序列化的时候，exec 执行一段 python 代码，新建一个 `@app.post("/")` 路由（相当于内存马？
 
-![img](../images/2024-DubheCTF/20240319010444749.webp)
+![](../images/2024-DubheCTF/20240319010444749.webp)
 
 将 bot 发送的东西都写到一个文件里，弹 shell 进去 cat 看看即可
 
@@ -297,7 +297,7 @@ http://1.95.13.243:49319/getlocal?path=/app/pref.yml
 
 同时看到没有打开 cache 功能
 
-![img](../images/2024-DubheCTF/20240319010444775.webp)
+![](../images/2024-DubheCTF/20240319010444775.webp)
 
 需要找另一个文件写入点
 
@@ -322,7 +322,7 @@ function parse(x) {
 
 http://1.95.13.243:49319/sub?target=clash&url=script:pref.yml&token=189069462103782304169366230
 
-![img](../images/2024-DubheCTF/20240319010444751.webp)
+![](../images/2024-DubheCTF/20240319010444751.webp)
 
 ## Javolution
 
@@ -330,7 +330,7 @@ http://1.95.13.243:49319/sub?target=clash&url=script:pref.yml&token=189069462103
 
 http://1.95.54.152:34473/pal/cheat?hp=-1000000000&attack=-1000000000&defense=-1000000000
 
-![img](../images/2024-DubheCTF/20240319010444758.webp)
+![](../images/2024-DubheCTF/20240319010444758.webp)
 
 然后 level 变 50 
 
@@ -350,7 +350,7 @@ Jdk 17 反序列化
 --add-opens java.xml/``com.sun.org``.apache.xpath.internal.objects=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED
 ```
 
-![img](../images/2024-DubheCTF/20240319010444936.webp)
+![](../images/2024-DubheCTF/20240319010444936.webp)
 
 ```Java
 import com.fasterxml.jackson.databind.node.POJONode;
@@ -720,7 +720,7 @@ for t in range(0, 257):
         pass
 ```
 
-![img](../images/2024-DubheCTF/20240319010444891.webp)
+![](../images/2024-DubheCTF/20240319010444891.webp)
 
 你永远可以相信可靠的J神逆出来的代码不会有任何问题 
 
@@ -921,7 +921,7 @@ sh.interactive()
 print(open('/flag').read())
 ```
 
-![img](../images/2024-DubheCTF/20240319010444993.webp)
+![](../images/2024-DubheCTF/20240319010444993.webp)
 
 ```
 DubheCTF{l3HC7F_h45_4_8e77ER_Ch4lLEngE!}
@@ -999,7 +999,7 @@ alt-svc: h3=":443"; ma=86400
 
 搭好这个隧道之后，就可以用 https://devtools.devprod.cloudflare.dev 连接这个 inspect 端口对 wrangler 项目进行调试。不过断点貌似不是很好下，不过可以在 Memory 里直接把整个 heap snapshot 导出，导出之后搜索一下 flag 就可以了。
 
-![img](../images/2024-DubheCTF/20240319010444931.webp)
+![](../images/2024-DubheCTF/20240319010444931.webp)
 
 ## no more taowa
 
@@ -1504,7 +1504,7 @@ if __name__ == '__main__':
     #     print(png_judge_type('./lsb_msb_test/' + f))
 ```
 
-![img](../images/2024-DubheCTF/20240319010445007.webp)
+![](../images/2024-DubheCTF/20240319010445007.webp)
 
 ```
 DubheCTF{j00_H4V3_m4573r3d_m47Ry05HK4_d0Ll2!}

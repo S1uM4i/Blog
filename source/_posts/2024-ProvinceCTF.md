@@ -36,7 +36,7 @@ Access Denied 用 X-Forwarded-For 伪造成 127.0.0.1 进行绕过
 
 这个 file 的传参什么都没说，要自己测，应该是要求以 `php://` 开头，而且限制了长度
 
-![img](../images/2024-ProvinceCTF/image1.webp)
+![](../images/2024-ProvinceCTF/image1.webp)
 
 ### Hackme（套娃缝合怪）
 
@@ -53,7 +53,7 @@ docker run -it sig2n /bin/bash
 root@201317bd1ea9:/app python3 jwt_forgery.py eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VyIjoiYWRtaW4iLCJpcCI6IjE3Mi4yMC4yNDAuMzIifQ.DDtMChPMQtBA_2_wJxLPO_6g5dTaM7stY2Knngol6qAeaWh4Y8EjY6ndBLuEMhXYyecpiLFXZxEPqkV_GW3rGReg7LTCfIb4x6M6RRhotbersK1AGKKGUyVHmr0es0bHpw eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VyIjoidGVzdCIsImlwIjoiMTcyLjIwLjI0MC4zMiJ9.A9CrtyzLavHQif9VRIHJN1kSjLefzcKPArv3Eo96EbSlD5gzRU78QGiFkdtW_YxQgYc7z82PqH1BQGWMf5CLBfYSQNB6V9HV7FyZJUpzZt2b-irXitYFhW2qQJr0i_yrJA
 ```
 
-![img](../images/2024-ProvinceCTF/image2.webp)
+![](../images/2024-ProvinceCTF/image2.webp)
 
 得到4个公钥文件
 
@@ -143,7 +143,7 @@ echo "Encode:\n" . print_r($jwt, true) . "\n";
 
 校验成功
 
-![img](../images/2024-ProvinceCTF/image3.webp)
+![](../images/2024-ProvinceCTF/image3.webp)
 
 第二层有个文件上传接口，一个getfile.php的文件下载接口
 
@@ -151,13 +151,13 @@ echo "Encode:\n" . print_r($jwt, true) . "\n";
 
 无法访问上传的文件，猜测oss和题目是一台服务器，访问本地的8000端口
 
-![img](../images/2024-ProvinceCTF/image4.webp)
+![](../images/2024-ProvinceCTF/image4.webp)
 
 xml数据错误，文件路径正确会显示download error => xxe，xxe禁止了system字符 => iconv编码绕过
 
-![img](../images/2024-ProvinceCTF/image5.webp)
+![](../images/2024-ProvinceCTF/image5.webp)
 
-![img](../images/2024-ProvinceCTF/image6.webp)
+![](../images/2024-ProvinceCTF/image6.webp)
 
 ### unserialize_web（原题）
 
@@ -191,7 +191,7 @@ www.zip 下载到源码
 
 题目环境不出网，但是题目中对 tcpdf 的代码做了一点小修改，让其可以直接打 gopher ssrf
 
-![img](../images/2024-ProvinceCTF/image7.webp)
+![](../images/2024-ProvinceCTF/image7.webp)
 
 payload
 
@@ -227,7 +227,7 @@ p.interactive()
 
 ### re1（无法验证flag正确性）
 
-![img](../images/2024-ProvinceCTF/image8.webp)
+![](../images/2024-ProvinceCTF/image8.webp)
 
 脑洞，main往上有一段deadcode是xxtea，delta改0xA4EE8C0其他不变 (可能因为n=2时y和z刚好重复了)
 
@@ -461,7 +461,7 @@ cmd.exe /c start "wt.exe" -w 0 nt -d . wsl.exe -d Ubuntu-22.04 bash -c "./brute 
 cmd.exe /c start "wt.exe" -w 0 nt -d . wsl.exe -d Ubuntu-22.04 bash -c "./brute 240"
 ```
 
-![img](../images/2024-ProvinceCTF/image10.webp)
+![](../images/2024-ProvinceCTF/image10.webp)
 
 ## Misc
 
@@ -477,9 +477,9 @@ cmd.exe /c start "wt.exe" -w 0 nt -d . wsl.exe -d Ubuntu-22.04 bash -c "./brute 
 
 ### 你要的就在这
 
-![img](../images/2024-ProvinceCTF/image11.webp)
+![](../images/2024-ProvinceCTF/image11.webp)
 
-![img](../images/2024-ProvinceCTF/image12.webp)
+![](../images/2024-ProvinceCTF/image12.webp)
 
 取前六位为密钥
 
@@ -499,7 +499,7 @@ stegpy xxx.png -p
 
 然后把对称算法都脑洞一遍（RC系列 AES系列 DES系列...）
 
-![img](../images/2024-ProvinceCTF/image13.webp)
+![](../images/2024-ProvinceCTF/image13.webp)
 
 ## Crypto
 

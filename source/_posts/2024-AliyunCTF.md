@@ -294,7 +294,7 @@ string s1, string s2, string s3, string s4, string s5, string s6 -> int {
 
 ## BadApple
 
-```Python
+```javascript
 let abuf = new ArrayBuffer(0x10);
 let bbuf = new BigUint64Array(abuf);
 let fbuf = new Float64Array(abuf);
@@ -735,7 +735,7 @@ if __name__ == '__main__':
         main()
 ```
 
-![img](../images/2024-AliyunCTF/20240325204801605.webp)
+![](../images/2024-AliyunCTF/20240325204801605.webp)
 
 ## BabyDH2
 
@@ -1204,7 +1204,7 @@ if __name__ == '__main__':
     g.gao()
 ```
 
-![img](../images/2024-AliyunCTF/20240325204801682.webp)
+![](../images/2024-AliyunCTF/20240325204801682.webp)
 
 # Web
 
@@ -1218,7 +1218,7 @@ https://gtfobins.github.io/gtfobins/dig/
 {"domain":"l1nyz-tel.cc","type":"-f/flag"}
 ```
 
-![img](../images/2024-AliyunCTF/20240325204801511.webp)
+![](../images/2024-AliyunCTF/20240325204801511.webp)
 
 ## chain17
 
@@ -1401,11 +1401,11 @@ dfs(start)
 
 010打开发现文件中只有UTF-8字符，没有其他数据；一眼盯出，同时存在长得很像的“文”字和类似字
 
-![img](../images/2024-AliyunCTF/20240325204801578.webp)
+![](../images/2024-AliyunCTF/20240325204801578.webp)
 
 换用兼容性不强的艺术字体（图中是字体圈欣意冠黑体）把这些字凸显出来，在Unicode表中检索，可以知道它们都是[康熙部首](https://zhuanlan.zhihu.com/p/352872903)：`assert all([0x2f00 <= ord(c) <= 0x2fdf for c in '⽂⾼⾦⾄⽣⽇⽌⽤⾔⽅⾧⾯⾹⾮⾃⼈⼯⼀⼗⼥⾳⽽⽬⼤⼆⼲⼿⽃⾖⼜⾻⼐⼩⾊⽰⽕⾍⽅⿎⽴⼊⾏⽉⽇'])`
 
-![img](../images/2024-AliyunCTF/20240325204801469.webp)
+![](../images/2024-AliyunCTF/20240325204801469.webp)
 
 原文有意义，不太可能是取这种字的字码，也不太可能是两个这种字之间的距离，因为有意义的原文不是这么好构造的。可以尝试把康熙部首和对应的正常字分别变成1和0
 
@@ -1655,7 +1655,7 @@ print(char)
 
 得到332bits，给0和1分别上色，发现如果每14位分为一组，刚好最高位都是0，且存在相同的几行
 
-![img](../images/2024-AliyunCTF/20240325204801445.webp)
+![](../images/2024-AliyunCTF/20240325204801445.webp)
 
 猜测14位编码一个汉字，尝试按区位码处理
 
