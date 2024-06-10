@@ -17,7 +17,7 @@
     "bulma-stylus": "0.8.0",
     "deepmerge": "^4.3.1",
     "hexo": "^7.0.0",
-    "hexo-component-inferno": "^3.0.0",
+    "hexo-component-inferno": "^3.1.1",
     "hexo-filter-auto-spacing": "^0.2.1",
     "hexo-filter-mathjax": "^0.9.0",
     "hexo-generator-archive": "^2.0.0",
