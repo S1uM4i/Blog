@@ -15,9 +15,9 @@ toc: true
 
 --------------------------------------------------------------------
 
-# 1. Reverse 
+# Reverse 
 
-## 1.1 packpy
+## packpy
 
 修改的upx，可以用这个直接修，并且脱壳
 
@@ -134,7 +134,7 @@ for seed_value in range(256):
     print(data)
 ```
 
-## 1.2 ccc
+## ccc
 
 python-3.10 pyd逆向
 
@@ -420,7 +420,7 @@ int main() {
 
 flag{c620aafa-a72b-d11f-2a9d-334d595bb4a7}
 
-## 1.3 jvm
+## jvm
 
 简单题，Quick js 参考 https://bbs.kanxue.com/thread-258985.htm
 
@@ -456,9 +456,9 @@ flag{js3ng1n7lik3m1r0uter!}>>>
 
 flag{js3ng1n7lik3m1r0uter!}
 
-# 2. Pwn
+# Pwn
 
-## 2.1 fshell
+## fshell
 
 简单的构造
 
@@ -592,9 +592,9 @@ io.sendline(b"-")
 io.interactive()
 ```
 
-# 3. Misc
+# Misc
 
-## 3.1 两极反转
+## 两极反转
 
 三个大的定位点之间的东西看起来都是对的
 
@@ -604,7 +604,7 @@ io.interactive()
 
 ![img](../images/2024-MatrixCUP/img_1.webp)
 
-## 3.2 WHAT_CAN_I_SAY
+## WHAT_CAN_I_SAY
 
 builtins都能用，那直接eval(bytes.fromhex ...
 
@@ -629,7 +629,7 @@ print(len(hex(r)))
 print(hex(r))
 ```
 
-## 3.3 SPY2.0
+## SPY2.0
 
 希望本题出题人以后不要再出题了
 
@@ -647,7 +647,7 @@ https://www.peter-eigenschink.at/projects/steganographyjs/showcase/
 
 ![img](../images/2024-MatrixCUP/img_2.webp)
 
-## 3.4 真假补丁
+## 真假补丁
 
 流量导出一个补丁，还有一个后门通信
 
@@ -696,9 +696,9 @@ def main():
 main()
 ```
 
-# 4. IOT
+# IOT
 
-## 4.1 special
+## special
 
 固件修复文件头，然后用binwalk解
 
@@ -712,9 +712,9 @@ main()
 
 flag{0e327444a0ef9a1819c341f396d97b18}
 
-# 5. PWN-漏洞挖掘
+# PWN-漏洞挖掘
 
-## 5.1 optimizer
+## optimizer
 
 宝，下次买题记得验一下是不是抄的。
 
@@ -913,9 +913,9 @@ arb_write32(foo_code + 0x18n, Number(jmp_addr >> 32n));
 foo();
 ```
 
-# 6. Web
+# Web
 
-## 6.1 tantantan
+## tantantan
 
 file 协议读文件。
 
@@ -963,7 +963,7 @@ gopherus 一把梭。
 
 ![img](../images/2024-MatrixCUP/img_8.webp)
 
-## 6.2 easyweb
+## easyweb
 
 ![img](../images/2024-MatrixCUP/img_9.webp)
 
@@ -973,7 +973,7 @@ gopherus 一把梭。
 
 ![img](../images/2024-MatrixCUP/img_12.webp)
 
-## 6.3 where
+## where
 
 http://web-4ed9765bdd.challenge.xctf.org.cn/look?file=/etc/passwd
 
@@ -1012,7 +1012,7 @@ if __name__ == '__main__':
 
 读 /root/.bash_history
 
-## 6.4 v_You_a_shell
+## v_You_a_shell
 
 给了php源码，需要的是打 ssrf 到 本机 /app/app.py 的服务以及dbus 服务
 
