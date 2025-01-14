@@ -972,7 +972,9 @@ sub_57B0的check整理一下就是：
 
 ![](../images/2025-SUCTF/b5968a0a-2364-454f-8c68-45ffe8aa9205.webp)
 
-最后解8个方程，方程为 $$ \left \lfloor \frac{x^2+2*x-3}{2} \right \rfloor == arr[m] $$
+最后解8个方程，方程为
+
+![](../images/2025-SUCTF/6798e0e8394a7ba56d4a655dabada2e067e5ddd19b3a47f3d4996efff6835a7a.webp)  
 
 用z3解：
 
@@ -2242,9 +2244,10 @@ flag二进制经过zfill填充，cs[0]对应的应该是i=0，找到cs[0]和cs[i
 
 根据BLS12-381的运算规则
 
-假设 $$ k_1=o//n_1,k_2=o//n_2 $$ 
+假设 
 
-$$ i=0\longrightarrow T_0=aG_1+bP_2\\ i=1\longrightarrow T_1=cG_2+dP_1\\ i=0\longrightarrow T_2=eG_1+fP_2\\ E(T_0,T_1)=E(G_1,G_2)^{ac-bdk_1k_2}\\ E(T_0,T_2)=E(G_1,G_2)^{(af-be)k_2}\\ E(T_0,T_1)^{n_2}\neq1\\ E(T_0,T_2)^{n_2}=E(T_0,T_2)^{(af-be)o}=1 $$
+![](../images/2025-SUCTF/3c11bde4d454e0eb06daa7bd822609d8d4ce5ca32cfb2b78b5c56c0cb1e03f5f.webp)  
+
 
 因为阶为o，判断weil_pairing后的n2次方结果是否为1即可
 
@@ -2525,7 +2528,8 @@ print(CC(fz))
 
 ## 4.6 SU_rsa
 
-$$ e(d_m + d_l) = 1 + k\phi $$ 
+![](../images/2025-SUCTF/e4b6fa76e293820878f37cf7740a202efba5a195b77a298fc5d772edc8c57838.webp)  
+
 
 已知e,d_m,N分解N
 
