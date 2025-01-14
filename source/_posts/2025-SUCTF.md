@@ -2041,9 +2041,9 @@ SUCTF{Con9ra7s!YouHaveFound_7HE_KEeee3ey_P4rt_0f_Th3_F1ag.}
 
 首先先贴一下反混淆的结果（大概就是合并 string literals，把 `xxxx['WTFky'](xxxx)` 这种东西还原，常量计算等）。
 
-暂时无法在飞书文档外展示此内容
+[deobfuscated.js](https://pastebin.com/z0GsPiQ0)
 
-然后就可以去盯它的加密逻辑了。然后不难发现，它是从 [aes-js](https://github.com/ricmoo/aes-js/blob/master/index.js) 搬的实现。继续对照发现，和标准 AES 不同的地方就是魔改了一下 rcon 这个表。把 rcon 这个表贴回去 aesjs，发现就能正常出结果了。然后把另一个密文解密出来，是 `_H4PpY_AsT_TTTTTTBing_BinG_Bing}`。
+然后就可以去盯它的加密逻辑了。然后不难发现，它是从 [aes-js](https://github.com/ricmoo/aes-js/blob/master/index.js) 搬的实现。继续对照发现，和标准 AES 不同的地方就是魔改了一下 rcon 这个表。把 rcon 这个表（即 `_0x1c8e39`）贴回去 aesjs，发现就能正常出结果了。然后把另一个密文解密出来，是 `_H4PpY_AsT_TTTTTTBing_BinG_Bing}`。
 
 然后呢，然后就要开始脑洞了
 
